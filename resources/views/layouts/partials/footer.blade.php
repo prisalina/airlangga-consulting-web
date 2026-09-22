@@ -12,17 +12,17 @@
                     <span class="text-2xl font-bold text-white">Airlangga<span class="text-secondary">Consulting</span></span>
                 </a>
                 <p class="text-white/70 text-sm leading-relaxed mb-8 pr-4">
-                    PT Dharma Putra Airlangga (Airlangga Consulting) siap menjadi mitra strategis Anda dalam merumuskan solusi berbasis keilmuan dan pengalaman praktis guna mengoptimalkan kinerja organisasi.
+                    {{ \App\Models\SiteSetting::get('footer_description', 'PT Dharma Putra Airlangga (Airlangga Consulting) siap menjadi mitra strategis Anda dalam merumuskan solusi berbasis keilmuan dan pengalaman praktis guna mengoptimalkan kinerja organisasi.') }}
                 </p>
                 
                 <div class="flex items-center gap-3">
-                    <a href="https://instagram.com/airlanggaconsulting" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-primary transition-colors duration-300">
+                    <a href="{{ \App\Models\SiteSetting::get('social_instagram', 'https://instagram.com/airlanggaconsulting') }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-primary transition-colors duration-300">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://linkedin.com/company/airlanggaconsulting" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-primary transition-colors duration-300">
+                    <a href="{{ \App\Models\SiteSetting::get('social_linkedin', 'https://linkedin.com/company/airlanggaconsulting') }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-primary transition-colors duration-300">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
-                    <a href="https://wa.me/6281130009000" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-primary transition-colors duration-300">
+                    <a href="https://wa.me/{{ \App\Models\SiteSetting::get('company_whatsapp', '6281130009000') }}" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-primary transition-colors duration-300">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
@@ -64,15 +64,15 @@
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3">
                         <i class="fa-solid fa-location-dot mt-1 text-secondary"></i>
-                        <span class="text-white/70 text-sm leading-relaxed">Surabaya,<br>Jawa Timur, Indonesia</span>
+                        <span class="text-white/70 text-sm leading-relaxed">{!! nl2br(e(\App\Models\SiteSetting::get('company_address', "Surabaya,\nJawa Timur, Indonesia"))) !!}</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fa-solid fa-envelope text-secondary"></i>
-                        <a href="mailto:halo@airlanggaconsulting.id" class="text-white/70 text-sm hover:text-secondary transition-colors">halo@airlanggaconsulting.id</a>
+                        <a href="mailto:{{ \App\Models\SiteSetting::get('company_email', 'halo@airlanggaconsulting.id') }}" class="text-white/70 text-sm hover:text-secondary transition-colors">{{ \App\Models\SiteSetting::get('company_email', 'halo@airlanggaconsulting.id') }}</a>
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fa-brands fa-whatsapp text-secondary text-lg"></i>
-                        <a href="https://wa.me/6281130009000" target="_blank" rel="noopener" class="text-white/70 text-sm hover:text-secondary transition-colors">0811-3000-9000</a>
+                        <a href="https://wa.me/{{ \App\Models\SiteSetting::get('company_whatsapp', '6281130009000') }}" target="_blank" rel="noopener" class="text-white/70 text-sm hover:text-secondary transition-colors">{{ \App\Models\SiteSetting::get('company_phone_text', '0811-3000-9000') }}</a>
                     </li>
                 </ul>
             </div>
