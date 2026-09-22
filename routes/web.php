@@ -33,3 +33,4 @@ Route::get('/kontak', [ContactController::class, 'index'])->name('contact.index'
 Route::post('/kontak', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/masuk', fn () => redirect('/admin'))->name('login');
+Route::get('/masuk-admin', \App\Livewire\Auth\LoginAdmin::class)->name('login.admin');

@@ -272,9 +272,9 @@
                     Lima Bidang Layanan<br><span>Utama Kami</span>
                 </h2>
             </div>
-            <a href="{{ route('services.index') }}" class="et-btn shrink-0">
-                <span class="icon"><i class="fa-solid fa-arrow-up-right"></i></span>
+            <a href="{{ route('services.index') }}" class="et-btn shrink-0 group">
                 Lihat Semua
+                <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
             </a>
         </div>
 

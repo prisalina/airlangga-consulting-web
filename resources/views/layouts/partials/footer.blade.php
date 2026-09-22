@@ -7,10 +7,15 @@
             
             {{-- Column 1: Brand & About --}}
             <div class="lg:col-span-4">
-                <a href="{{ route('home') }}" class="inline-flex items-center gap-3 mb-6">
+                <a href="{{ route('home') }}" class="inline-flex items-center gap-3 mb-1">
                     <img src="{{ asset('images/logo-airlangga.png') }}" alt="Logo PT. Airlangga Univ Konsultan" class="h-12 w-12 object-contain shrink-0" style="mix-blend-mode: screen;">
                     <span class="text-2xl font-bold text-white">PT. Airlangga Univ <span class="text-secondary">Konsultan</span></span>
                 </a>
+                
+                <div class="mb-6 text-[15px] font-semibold text-white">
+                    Part of <a href="https://dpacorp.id/" target="_blank" rel="noopener noreferrer" class="text-[#00B4D8] hover:underline transition-all">PT Dharma Putra Airlangga</a>
+                </div>
+
                 <p class="text-white/70 text-sm leading-relaxed mb-8 pr-4">
                     {{ \App\Models\SiteSetting::get('footer_description', 'PT. Airlangga Univ Konsultan siap menjadi mitra strategis Anda dalam merumuskan solusi berbasis keilmuan dan pengalaman praktis guna mengoptimalkan kinerja organisasi.') }}
                 </p>

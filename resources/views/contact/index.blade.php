@@ -16,31 +16,9 @@
 <div class="py-16 bg-[#F8F9FA]">
     <div class="et-container">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {{-- Info Kontak --}}
-            <div class="lg:col-span-1 space-y-6">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-[#F5A800]/10 rounded-full flex items-center justify-center text-[#F5A800] mb-4 text-xl">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <h3 class="font-bold text-primary mb-2">Kantor Pusat</h3>
-                    <p class="text-primary/70 text-sm">Surabaya, Jawa Timur, Indonesia</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-[#F5A800]/10 rounded-full flex items-center justify-center text-[#F5A800] mb-4 text-xl">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <h3 class="font-bold text-primary mb-2">Email</h3>
-                    <a href="mailto:halo@airlanggaconsulting.id" class="text-primary/70 text-sm hover:text-[#F5A800]">halo@airlanggaconsulting.id</a>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="w-12 h-12 bg-[#F5A800]/10 rounded-full flex items-center justify-center text-[#F5A800] mb-4 text-xl">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <h3 class="font-bold text-primary mb-2">WhatsApp</h3>
-                    <a href="https://wa.me/6281130009000" target="_blank" rel="noopener" class="text-primary/70 text-sm hover:text-[#F5A800]">0811-3000-9000</a>
-                </div>
+            {{-- Fitur Diskusi Komentar Publik --}}
+            <div class="lg:col-span-1 h-full">
+                @livewire('public-comments')
             </div>
 
             {{-- Form Kontak --}}

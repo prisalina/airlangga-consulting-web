@@ -13,6 +13,7 @@
             {{-- Desktop Nav --}}
             <nav class="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
                 <a href="{{ route('home') }}" class="nav-link px-3 py-2 text-sm font-medium text-primary hover:text-[#F5A800] transition-colors {{ request()->routeIs('home') ? 'text-[#F5A800]' : '' }}">Beranda</a>
+                <a href="{{ route('about.index') }}" class="nav-link px-3 py-2 text-sm font-medium text-primary hover:text-[#F5A800] transition-colors {{ request()->routeIs('about.*') ? 'text-[#F5A800]' : '' }}">Tentang Kami</a>
 
                 {{-- Layanan Dropdown --}}
                 <div class="relative group">
@@ -33,8 +34,6 @@
                 <a href="{{ route('products.index') }}" class="nav-link px-3 py-2 text-sm font-medium text-primary hover:text-[#F5A800] transition-colors {{ request()->routeIs('products.*') ? 'text-[#F5A800]' : '' }}">Produk Digital</a>
                 <a href="{{ route('case-studies.index') }}" class="nav-link px-3 py-2 text-sm font-medium text-primary hover:text-[#F5A800] transition-colors {{ request()->routeIs('case-studies.*') ? 'text-[#F5A800]' : '' }}">Studi Kasus</a>
                 <a href="{{ route('blog.index') }}" class="nav-link px-3 py-2 text-sm font-medium text-primary hover:text-[#F5A800] transition-colors {{ request()->routeIs('blog.*') ? 'text-[#F5A800]' : '' }}">Blog</a>
-                <a href="{{ route('about.index') }}" class="nav-link px-3 py-2 text-sm font-medium text-primary hover:text-[#F5A800] transition-colors {{ request()->routeIs('about.*') ? 'text-[#F5A800]' : '' }}">Tentang Kami</a>
-                <a href="{{ route('contact.index') }}" class="nav-link px-3 py-2 text-sm font-medium text-primary hover:text-[#F5A800] transition-colors {{ request()->routeIs('contact.*') ? 'text-[#F5A800]' : '' }}">Kontak</a>
             </nav>
 
             {{-- CTA Button --}}
