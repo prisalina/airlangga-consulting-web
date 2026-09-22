@@ -13,9 +13,9 @@
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 w-full max-w-md">
             <form wire:submit.prevent="login" class="space-y-4">
                 <div>
-                    <label class="block text-sm font-semibold text-primary mb-2">Email Admin</label>
-                    <input type="email" wire:model="email" class="form-input w-full" placeholder="admin@contoh.com" required>
-                    @error('email') <span class="text-red-500 text-xs mt-1 block">{{ $message }}</span> @enderror
+                    <label class="block text-sm font-semibold text-primary mb-2">Username / Email Admin</label>
+                    <input type="text" wire:model="username" class="form-input w-full" placeholder="admin atau admin@contoh.com" required>
+                    @error('username') <span class="text-red-500 text-xs mt-1 block">{{ $message }}</span> @enderror
                 </div>
                 
                 <div>

@@ -7,11 +7,11 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginAdmin extends Component
 {
-    public $email = '';
+    public $username = '';
     public $password = '';
 
     protected $rules = [
-        'email' => 'required|email',
+        'username' => 'required',
         'password' => 'required',
     ];
 
@@ -19,13 +19,16 @@ class LoginAdmin extends Component
     {
         $this->validate();
 
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
+        // Bisa login pakai email atau username
+        $fieldType = filter_var($this->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
+
+        if (Auth::attempt([$fieldType => $this->username, 'password' => $this->password])) {
             session()->regenerate();
             session()->put('is_public_admin', true);
             return redirect()->route('contact.index');
         }
 
-        $this->addError('email', 'Kredensial tidak cocok dengan data kami.');
+        $this->addError('username', 'Kredensial tidak cocok dengan data kami.');
     }
 
     public function render()

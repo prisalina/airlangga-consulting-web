@@ -34,7 +34,7 @@
             </div>
 
             {{-- Column 2: Quick Links --}}
-            <div class="lg:col-span-2 lg:col-start-6">
+            <div class="lg:col-span-2">
                 <h4 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-secondary"></span> Tautan
                 </h4>
@@ -62,7 +62,7 @@
             </div>
 
             {{-- Column 4: Contact --}}
-            <div class="lg:col-span-2">
+            <div class="lg:col-span-3">
                 <h4 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-secondary"></span> Hubungi Kami
                 </h4>
@@ -91,7 +91,7 @@
                 <p class="text-white/50 text-sm">
                     &copy; {{ date('Y') }} <strong>PT. Airlangga Univ Konsultan</strong>. Hak Cipta Dilindungi.
                 </p>
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-6 pr-16 md:pr-20">
                     <a href="{{ route('contact.index') }}" class="text-white/50 hover:text-secondary text-sm transition-colors">Hubungi Kami</a>
                     <a href="#" class="text-white/50 hover:text-secondary text-sm transition-colors">Kebijakan Privasi</a>
                 </div>

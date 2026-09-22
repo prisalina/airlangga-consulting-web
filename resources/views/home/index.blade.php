@@ -6,7 +6,7 @@
 @section('content')
 
 {{-- ===== HERO SECTION ===== --}}
-<section class="et-banner overflow-hidden relative" style="background: linear-gradient(135deg, #EEF2FF 0%, #F8FAFF 40%, #FFFDF5 80%, #FFFFFF 100%);">
+<section class="et-banner overflow-hidden relative pt-32 lg:pt-40 pb-20" style="background: linear-gradient(135deg, #EEF2FF 0%, #F8FAFF 40%, #FFFDF5 80%, #FFFFFF 100%);">
 
     {{-- Glow blobs besar & terlihat --}}
     <div class="absolute -top-20 -left-20 w-[500px] h-[500px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(28,43,94,0.12) 0%, transparent 70%);"></div>
@@ -142,9 +142,11 @@
     </div>
 
     <div class="et-container relative z-10">
-        <p class="et-section-sub-title inline-flex justify-center mx-auto mb-4 relative">
-            Konsultan Profesional Berbasis Keilmuan dan Praktik
-        </p>
+        <div class="flex justify-center">
+            <p class="et-section-sub-title inline-flex justify-center mb-4 relative">
+                Konsultan Profesional Berbasis Keilmuan dan Praktik
+            </p>
+        </div>
         <h1 class="text-primary text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-center max-w-4xl mx-auto mb-6 relative">
             Mendorong Kinerja, <br class="hidden md:block"> <span class="text-secondary relative">Mewujudkan <svg class="absolute w-full h-3 -bottom-1 left-0 text-secondary/30" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="4" fill="none"/></svg></span> Dampak
         </h1>
