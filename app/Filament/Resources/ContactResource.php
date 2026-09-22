@@ -84,7 +84,7 @@ class ContactResource extends Resource
                             if (str_starts_with($phone, '0')) {
                                 $phone = '62' . substr($phone, 1);
                             }
-                            $text = urlencode("Halo {$record->name}, saya dari Airlangga Consulting. Menindaklanjuti pesan Anda terkait {$record->service_interest}...");
+                            $text = urlencode("Halo {$record->name}, saya dari PT. Airlangga Univ Konsultan. Menindaklanjuti pesan Anda terkait {$record->service_interest}...");
                             return "https://wa.me/{$phone}?text={$text}";
                         })
                         ->openUrlInNewTab()
@@ -94,7 +94,7 @@ class ContactResource extends Resource
                         ->label('Balas Email')
                         ->icon('heroicon-o-envelope')
                         ->color('info')
-                        ->url(fn (Contact $record) => "mailto:{$record->email}?subject=" . urlencode("Tanggapan dari Airlangga Consulting: {$record->subject}"))
+                        ->url(fn (Contact $record) => "mailto:{$record->email}?subject=" . urlencode("Tanggapan dari PT. Airlangga Univ Konsultan: {$record->subject}"))
                         ->openUrlInNewTab()
                         ->visible(fn (Contact $record) => !empty($record->email)),
 

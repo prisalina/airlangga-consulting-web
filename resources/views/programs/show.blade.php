@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $program->title . ' | Airlangga Consulting')
+@section('title', $program->title . ' | PT. Airlangga Univ Konsultan')
 
 @section('content')
 <div class="py-12 bg-[#F8F9FA] border-b border-gray-200">

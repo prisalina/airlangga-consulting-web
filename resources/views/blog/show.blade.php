@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $post->meta_title ?: $post->title . ' | Airlangga Consulting')
+@section('title', $post->meta_title ?: $post->title . ' | PT. Airlangga Univ Konsultan')
 @section('description', $post->meta_description ?: $post->excerpt)
 
 @section('content')

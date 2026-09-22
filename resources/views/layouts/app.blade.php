@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'Airlangga Consulting') — Konsultan Profesional Berbasis Keilmuan dan Praktik</title>
-    <meta name="description" content="@yield('description', 'PT Dharma Putra Airlangga membantu organisasi, perusahaan, instansi pemerintah, maupun individu menghadapi berbagai tantangan dan mencapai tujuan strategis.')">
+    <title>@yield('title', 'PT. Airlangga Univ Konsultan') — Konsultan Profesional Berbasis Keilmuan dan Praktik</title>
+    <meta name="description" content="@yield('description', 'PT. Airlangga Univ Konsultan membantu organisasi, perusahaan, instansi pemerintah, maupun individu menghadapi berbagai tantangan dan mencapai tujuan strategis.')">
 
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Airlangga Consulting">
-    <meta property="og:title" content="@yield('title', 'Airlangga Consulting')">
-    <meta property="og:description" content="@yield('description', 'PT Dharma Putra Airlangga')">
+    <meta property="og:site_name" content="PT. Airlangga Univ Konsultan">
+    <meta property="og:title" content="@yield('title', 'PT. Airlangga Univ Konsultan')">
+    <meta property="og:description" content="@yield('description', 'PT. Airlangga Univ Konsultan')">
     <meta property="og:url" content="{{ url()->current() }}">
 
     <link rel="canonical" href="{{ url()->current() }}">
@@ -93,8 +93,8 @@
                 <div class="offcanvas__content">
                     <div class="flex justify-between items-center mb-6">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('storage/site/logo.jpeg') }}" alt="Airlangga Consulting" class="h-9 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
-                            <span class="text-xl font-bold text-primary hidden">Airlangga Consulting</span>
+                            <img src="{{ asset('storage/site/logo.jpeg') }}" alt="PT. Airlangga Univ Konsultan" class="h-9 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                            <span class="text-xl font-bold text-primary hidden">PT. Airlangga Univ Konsultan</span>
                         </a>
                         <button id="offcanvas-close" class="text-gray-500 hover:text-primary text-xl">
                             <i class="fas fa-times"></i>

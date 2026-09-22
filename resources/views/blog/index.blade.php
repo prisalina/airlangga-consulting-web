@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Blog & Insight | Airlangga Consulting')
+@section('title', 'Blog & Insight | PT. Airlangga Univ Konsultan')
 
 @section('content')
 
-<div class="bg-[#1C2B5E] py-24 lg:py-32 relative overflow-hidden">
+<div class="bg-[#1C2B5E] py-16 lg:py-20 relative overflow-hidden">
     <x-hero-bg />
 
     <div class="et-container relative z-10 text-center max-w-3xl mx-auto">

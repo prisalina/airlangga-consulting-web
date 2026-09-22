@@ -5,8 +5,8 @@
             {{-- Logo --}}
             <div class="logo shrink-0">
                 <a href="{{ route('home') }}" class="inline-flex items-center gap-2.5">
-                    <img src="{{ asset('images/logo-airlangga.png') }}" alt="Logo Airlangga Consulting" class="h-11 w-11 object-contain shrink-0">
-                    <span class="text-lg font-bold text-primary leading-none">Airlangga<span class="text-[#F5A800]">Consulting</span></span>
+                    <img src="{{ asset('images/logo-airlangga.png') }}" alt="Logo PT. Airlangga Univ Konsultan" class="h-11 w-11 object-contain shrink-0">
+                    <span class="text-lg font-bold text-primary leading-none">PT. Airlangga Univ <span class="text-[#F5A800]">Konsultan</span></span>
                 </a>
             </div>
 

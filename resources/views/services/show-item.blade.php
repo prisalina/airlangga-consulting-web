@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $serviceItem->name . ' | Airlangga Consulting')
+@section('title', $serviceItem->name . ' | PT. Airlangga Univ Konsultan')
 
 @section('content')
 

@@ -8,11 +8,11 @@
             {{-- Column 1: Brand & About --}}
             <div class="lg:col-span-4">
                 <a href="{{ route('home') }}" class="inline-flex items-center gap-3 mb-6">
-                    <img src="{{ asset('images/logo-airlangga.png') }}" alt="Logo Airlangga Consulting" class="h-12 w-12 object-contain shrink-0" style="mix-blend-mode: screen;">
-                    <span class="text-2xl font-bold text-white">Airlangga<span class="text-secondary">Consulting</span></span>
+                    <img src="{{ asset('images/logo-airlangga.png') }}" alt="Logo PT. Airlangga Univ Konsultan" class="h-12 w-12 object-contain shrink-0" style="mix-blend-mode: screen;">
+                    <span class="text-2xl font-bold text-white">PT. Airlangga Univ <span class="text-secondary">Konsultan</span></span>
                 </a>
                 <p class="text-white/70 text-sm leading-relaxed mb-8 pr-4">
-                    {{ \App\Models\SiteSetting::get('footer_description', 'PT Dharma Putra Airlangga (Airlangga Consulting) siap menjadi mitra strategis Anda dalam merumuskan solusi berbasis keilmuan dan pengalaman praktis guna mengoptimalkan kinerja organisasi.') }}
+                    {{ \App\Models\SiteSetting::get('footer_description', 'PT. Airlangga Univ Konsultan siap menjadi mitra strategis Anda dalam merumuskan solusi berbasis keilmuan dan pengalaman praktis guna mengoptimalkan kinerja organisasi.') }}
                 </p>
                 
                 <div class="flex items-center gap-3">
@@ -84,7 +84,7 @@
         <div class="et-container">
             <div class="flex flex-col md:flex-row items-center justify-between py-6 gap-4">
                 <p class="text-white/50 text-sm">
-                    &copy; {{ date('Y') }} <strong>Airlangga Consulting</strong>. Hak Cipta Dilindungi.
+                    &copy; {{ date('Y') }} <strong>PT. Airlangga Univ Konsultan</strong>. Hak Cipta Dilindungi.
                 </p>
                 <div class="flex items-center gap-6">
                     <a href="{{ route('contact.index') }}" class="text-white/50 hover:text-secondary text-sm transition-colors">Hubungi Kami</a>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Airlangga Consulting')
-@section('description', 'PT Dharma Putra Airlangga membantu organisasi, perusahaan, instansi pemerintah, maupun individu menghadapi berbagai tantangan dan mencapai tujuan strategis.')
+@section('title', 'PT. Airlangga Univ Konsultan')
+@section('description', 'PT. Airlangga Univ Konsultan membantu organisasi, perusahaan, instansi pemerintah, maupun individu menghadapi berbagai tantangan dan mencapai tujuan strategis.')
 
 @section('content')
 
@@ -151,7 +151,7 @@
 
         {{-- Deskripsi rata tengah, layout sesuai inspect --}}
         <p class="text-primary/75 text-base md:text-lg leading-relaxed max-w-[640px] mx-auto mb-8 text-center">
-            PT Dharma Putra Airlangga membantu organisasi, perusahaan, instansi pemerintah, maupun individu menghadapi berbagai tantangan dan mencapai tujuan strategis melalui layanan konsultasi yang memadukan keilmuan, pengalaman praktis, dan solusi yang aplikatif.
+            PT. Airlangga Univ Konsultan membantu organisasi, perusahaan, instansi pemerintah, maupun individu menghadapi berbagai tantangan dan mencapai tujuan strategis melalui layanan konsultasi yang memadukan keilmuan, pengalaman praktis, dan solusi yang aplikatif.
         </p>
 
         {{-- Trust badges kecil --}}
@@ -240,7 +240,7 @@
                     {{-- Offset Border Box --}}
                     <div class="absolute -bottom-6 -left-6 w-full h-full border-4 border-secondary/80 rounded-2xl -z-10"></div>
                     
-                    <img src="{{ asset('images/about-consulting.jpg') }}" alt="Tim Airlangga Consulting" class="w-full rounded-2xl shadow-[0_20px_50px_rgba(28,43,94,0.15)] object-cover aspect-square lg:aspect-[4/5]" onerror="this.src='https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80'">
+                    <img src="{{ asset('images/about-consulting.jpg') }}" alt="Tim PT. Airlangga Univ Konsultan" class="w-full rounded-2xl shadow-[0_20px_50px_rgba(28,43,94,0.15)] object-cover aspect-square lg:aspect-[4/5]" onerror="this.src='https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80'">
                     
                     {{-- Floating Badge --}}
                     <div class="absolute -bottom-10 right-10 bg-white p-5 rounded-2xl shadow-xl flex items-center gap-4 animate-bounce border-b-4 border-secondary" style="animation-duration: 5s;">

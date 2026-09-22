@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami | Airlangga Consulting')
+@section('title', 'Tentang Kami | PT. Airlangga Univ Konsultan')
 
 @section('content')
 
 {{-- Header Banner --}}
-<div class="bg-[#1C2B5E] py-24 lg:py-32 relative overflow-hidden">
+<div class="bg-[#1C2B5E] py-16 lg:py-20 relative overflow-hidden">
     <x-hero-bg />
 
     <div class="et-container relative z-10 text-center">
         <div class="et-section-sub-title !bg-white/10 !border-white/20 !text-white mb-4">Tentang Kami</div>
-        <h1 class="text-white text-4xl md:text-5xl lg:text-[52px] font-bold mb-6 leading-tight">Mengenal Lebih Dekat<br><span class="text-[#F5A800]">Airlangga Consulting</span></h1>
+        <h1 class="text-white text-4xl md:text-5xl lg:text-[52px] font-bold mb-6 leading-tight">Mengenal Lebih Dekat<br><span class="text-[#F5A800]">PT. Airlangga Univ Konsultan</span></h1>
         <p class="text-white/65 max-w-2xl mx-auto text-lg leading-relaxed">
             Mitra strategis dalam transformasi organisasi, pengembangan SDM, dan inovasi bisnis yang berkelanjutan.
         </p>
@@ -25,14 +25,24 @@
                 <img src="{{ asset('images/about-consulting.jpg') }}" alt="Tentang Kami" class="w-full rounded-2xl shadow-xl" onerror="this.src='https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80'">
             </div>
             <div>
-                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-6">Visi Kami Adalah <span class="text-[#F5A800]">Kesuksesan Anda</span></h2>
-                <div class="space-y-4 text-primary/70 leading-relaxed">
+                <h2 class="text-3xl lg:text-4xl font-bold text-primary mb-6">Profil & Sejarah <span class="text-[#F5A800]">Perusahaan</span></h2>
+                <div class="space-y-4 text-primary/70 leading-relaxed text-justify">
                     <p>
-                        PT Dharma Putra Airlangga (Airlangga Consulting) hadir untuk menjawab tantangan dinamika bisnis dan birokrasi di Indonesia. Kami percaya bahwa setiap organisasi memiliki potensi optimal yang dapat dicapai melalui pendekatan saintifik, riset mendalam, dan best practices.
+                        <strong>PT. Airlangga Univ Konsultan</strong> adalah perusahaan yang membantu organisasi, perusahaan, instansi pemerintah, maupun individu dalam meningkatkan kinerja dan mencapai tujuan strategis melalui layanan konsultasi yang berbasis keilmuan dan praktik profesional.
                     </p>
                     <p>
-                        Sebagai konsultan manajemen dan pengembangan sumber daya manusia, kami memposisikan diri bukan sekadar sebagai pembuat laporan, melainkan sebagai <strong class="text-primary">pendamping transformasi</strong> yang memastikan setiap strategi dapat dieksekusi dengan baik di lapangan.
+                        Kami memposisikan diri bukan sekadar sebagai pembuat laporan, melainkan sebagai <strong class="text-primary">pendamping transformasi</strong> yang memastikan setiap strategi dapat dieksekusi dengan baik di lapangan untuk menjawab tantangan dinamika bisnis dan birokrasi di Indonesia.
                     </p>
+                </div>
+                
+                {{-- Info Legalitas Highlight Box --}}
+                <div class="mt-6 p-5 bg-[#1C2B5E]/5 border-l-4 border-[#F5A800] rounded-r-xl">
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-scale-balanced text-xl text-[#F5A800] mt-1"></i>
+                        <p class="text-sm text-primary/80 leading-relaxed text-justify">
+                            Airlangga Univ Konsultan dibentuk pada tanggal <strong>23 Maret 2021</strong> sesuai Akta Pendirian Perusahaan No. 14 Tanggal 23 Maret 2021, serta mendapatkan pengesahan sesuai dengan Keputusan Menteri Hukum & Hak Asasi Manusia Republik Indonesia <span class="font-semibold text-primary">AHU-00064.AH.02.01.Tahun 2020</span>.
+                        </p>
+                    </div>
                 </div>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
