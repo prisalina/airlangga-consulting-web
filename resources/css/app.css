@@ -1,0 +1,183 @@
+@import 'tailwindcss';
+
+/* ============================================
+   Airlangga Consulting — Custom CSS
+   Primary: #1C2B5E (Navy Blue)
+   Secondary: #F5A800 (Amber/Gold)
+   Background: #F8F9FA (Light Gray)
+============================================ */
+
+@theme {
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+    --color-primary: #1C2B5E;
+    --color-secondary: #F5A800;
+    --color-etWhite: #F8F9FA;
+}
+
+/* Base */
+body {
+    font-family: var(--font-jakarta);
+    color: var(--color-primary);
+}
+
+/* ============================================
+   ET Button
+============================================ */
+.et-btn {
+    @apply inline-flex items-center gap-2 bg-[#1C2B5E] text-white text-[14px] font-semibold px-5 py-2.5 rounded-full transition duration-300 hover:bg-[#F5A800] hover:text-[#1C2B5E];
+}
+
+.et-btn .icon {
+    @apply w-7 h-7 rounded-full bg-[#F5A800] text-[#1C2B5E] flex items-center justify-center text-xs transition duration-300;
+}
+
+.et-btn:hover .icon {
+    @apply bg-[#1C2B5E] text-[#F5A800];
+}
+
+.et-btn.bg-white {
+    @apply bg-white text-[#1C2B5E] border border-[#1C2B5E];
+}
+.et-btn.bg-white:hover {
+    @apply bg-[#1C2B5E] text-white;
+}
+
+.et-btn.bg-secondary {
+    @apply bg-[#F5A800] text-[#1C2B5E];
+}
+.et-btn.bg-secondary:hover {
+    @apply bg-[#1C2B5E] text-white;
+}
+
+/* ============================================
+   Section Titles
+============================================ */
+.et-section-sub-title {
+    @apply inline-flex items-center gap-2 text-[13px] font-semibold text-[#1C2B5E] bg-[#F5A8001A] border border-[#F5A80033] rounded-full px-4 py-1 mb-3;
+}
+
+.et-section-title {
+    @apply text-[clamp(24px,2.5vw,40px)] font-bold text-[#1C2B5E] leading-tight;
+}
+
+.et-section-title span {
+    @apply text-[#F5A800];
+}
+
+/* ============================================
+   Container
+============================================ */
+.et-container {
+    @apply max-w-[1400px] mx-auto px-4 lg:px-6;
+}
+
+/* ============================================
+   Service Card
+============================================ */
+.service-item {
+    @apply bg-white rounded-2xl px-6 py-8 transition duration-300;
+}
+
+/* ============================================
+   Testimonial Slider
+============================================ */
+.testimonial-wrap {
+    @apply bg-[#1C2B5E];
+}
+
+/* ============================================
+   Choose / Why Us Items
+============================================ */
+.choose-items {
+    @apply flex items-center gap-6 border border-[#DEE2E6] rounded-lg p-6 hover:bg-[#F5A8001A] transition duration-300;
+}
+
+/* ============================================
+   Team Card
+============================================ */
+.team-item {
+    @apply bg-[#F8F9FA] rounded-2xl text-center;
+}
+
+/* ============================================
+   FAQ Accordion
+============================================ */
+.accordion-item {
+    @apply grid grid-rows-[max-content_0fr] duration-300;
+}
+.accordion-item.open {
+    grid-template-rows: max-content 1fr;
+}
+.accordion-collapse {
+    @apply overflow-hidden;
+}
+
+/* ============================================
+   Blog Card
+============================================ */
+.blog-card {
+    @apply bg-[#F8F9FA] rounded-2xl overflow-hidden hover:bg-[#F5A800] hover:-translate-y-2 transition duration-300;
+}
+
+/* ============================================
+   Hero Section
+============================================ */
+.et-banner {
+    background-image: linear-gradient(135deg, #F8F9FA 0%, #EEF2FF 100%);
+    @apply relative pt-16 pb-12 text-center;
+}
+
+/* ============================================
+   Navigation
+============================================ */
+.nav-link {
+    @apply relative;
+}
+.nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#F5A800] transition-all duration-300;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+    @apply w-3/4;
+}
+
+/* ============================================
+   Swiper Testimonial
+============================================ */
+.testimonial-slider1 .swiper-slide {
+    @apply opacity-50 transition duration-300;
+}
+.testimonial-slider1 .swiper-slide-active {
+    @apply opacity-100;
+}
+
+/* ============================================
+   Sectors List
+============================================ */
+.sectors-list li {
+    @apply flex items-center justify-between gap-2 border-b border-[#DDE4E3] text-[#1C2B5E] text-[15px] font-semibold py-3 list-none cursor-pointer;
+}
+.sectors-list li:hover span {
+    @apply bg-[#1C2B5E] text-white;
+}
+
+/* ============================================
+   Form Inputs
+============================================ */
+.form-input {
+    @apply w-full border border-[#DEE2E6] rounded-lg px-4 py-3 text-[15px] text-[#1C2B5E] placeholder-gray-400 focus:outline-none focus:border-[#1C2B5E] transition;
+}
+
+/* ============================================
+   Pagination
+============================================ */
+.pagination {
+    @apply flex items-center justify-center gap-2 mt-8;
+}
+.pagination .page-link {
+    @apply w-10 h-10 rounded-full flex items-center justify-center text-sm border border-[#DEE2E6] text-[#1C2B5E] hover:bg-[#1C2B5E] hover:text-white hover:border-[#1C2B5E] transition;
+}
+.pagination .active .page-link {
+    @apply bg-[#1C2B5E] text-white border-[#1C2B5E];
+}

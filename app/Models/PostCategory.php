@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class PostCategory extends Model
+{
+    protected $fillable = ['name', 'slug', 'sort_order'];
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+}

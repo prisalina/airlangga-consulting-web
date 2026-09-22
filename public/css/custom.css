@@ -1,0 +1,172 @@
+
+
+@layer components {
+    /* Base */
+    body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: #1C2B5E;
+    }
+
+    /* ============================================
+       ET Button
+    ============================================ */
+    .et-btn {
+        @apply inline-flex items-center gap-2 bg-primary text-white text-[14px] font-semibold px-5 py-2.5 rounded-full transition duration-300 hover:bg-secondary hover:text-primary;
+    }
+
+    .et-btn .icon {
+        @apply w-7 h-7 rounded-full bg-secondary text-primary flex items-center justify-center text-xs transition duration-300;
+    }
+
+    .et-btn:hover .icon {
+        @apply bg-primary text-secondary;
+    }
+
+    .et-btn.bg-white {
+        @apply bg-white text-primary border border-primary;
+    }
+    .et-btn.bg-white:hover {
+        @apply bg-primary text-white;
+    }
+
+    .et-btn.bg-secondary {
+        @apply bg-secondary text-primary;
+    }
+    .et-btn.bg-secondary:hover {
+        @apply bg-primary text-white;
+    }
+
+    /* ============================================
+       Section Titles
+    ============================================ */
+    .et-section-sub-title {
+        @apply inline-flex items-center gap-2 text-[13px] font-semibold text-primary bg-[#F5A8001A] border border-[#F5A80033] rounded-full px-4 py-1 mb-3;
+    }
+
+    .et-section-title {
+        @apply text-[clamp(24px,2.5vw,40px)] font-bold text-primary leading-tight;
+    }
+
+    .et-section-title span {
+        @apply text-secondary;
+    }
+
+    /* ============================================
+       Container
+    ============================================ */
+    .et-container {
+        @apply max-w-[1400px] mx-auto px-4 lg:px-6;
+    }
+
+    /* ============================================
+       Cards & Items
+    ============================================ */
+    .service-item {
+        @apply bg-white rounded-2xl px-6 py-8 transition duration-300 shadow-sm border border-gray-100;
+    }
+    .service-item:hover {
+        @apply bg-secondary -translate-y-2 border-secondary shadow-lg;
+    }
+
+    .testimonial-wrap {
+        @apply bg-primary;
+    }
+
+    .choose-items {
+        @apply flex items-center gap-6 border border-gray-200 rounded-lg p-6 hover:bg-secondary/10 transition duration-300;
+    }
+
+    .team-item {
+        @apply bg-[#F8F9FA] rounded-2xl text-center shadow-sm border border-gray-100 hover:shadow-md transition;
+    }
+
+    /* ============================================
+       FAQ Accordion
+    ============================================ */
+    .accordion-item {
+        @apply grid grid-rows-[max-content_0fr] duration-300;
+    }
+    .accordion-item.open {
+        grid-template-rows: max-content 1fr;
+    }
+    .accordion-collapse {
+        @apply overflow-hidden;
+    }
+
+    /* ============================================
+       Blog Card
+    ============================================ */
+    .blog-card {
+        @apply bg-[#F8F9FA] rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-2 transition duration-300 border border-gray-100;
+    }
+    
+    .blog-card:hover h5 a {
+        @apply text-secondary;
+    }
+
+    /* ============================================
+       Hero Section
+    ============================================ */
+    .et-banner {
+        background-image: linear-gradient(135deg, #F8F9FA 0%, #EEF2FF 100%);
+        @apply relative pt-20 pb-16 text-center;
+    }
+
+    /* ============================================
+       Navigation
+    ============================================ */
+    .nav-link {
+        @apply relative;
+    }
+    .nav-link::after {
+        content: '';
+        @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-secondary transition-all duration-300;
+    }
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        @apply w-3/4;
+    }
+
+    /* ============================================
+       Swiper Testimonial
+    ============================================ */
+    .testimonial-slider1 .swiper-slide {
+        @apply opacity-50 transition duration-300;
+    }
+    .testimonial-slider1 .swiper-slide-active {
+        @apply opacity-100;
+    }
+
+    /* ============================================
+       Sectors List
+    ============================================ */
+    .sectors-list li {
+        @apply flex items-center justify-between gap-2 border-b border-gray-200 text-primary text-[15px] font-semibold py-4 list-none cursor-pointer transition;
+    }
+    .sectors-list li:hover {
+        @apply bg-primary text-white px-4 rounded-lg border-transparent;
+    }
+    .sectors-list li:hover span {
+        @apply bg-white text-primary border-transparent;
+    }
+
+    /* ============================================
+       Form Inputs
+    ============================================ */
+    .form-input {
+        @apply w-full border border-gray-300 rounded-lg px-4 py-3 text-[15px] text-primary placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition;
+    }
+
+    /* ============================================
+       Pagination
+    ============================================ */
+    .pagination {
+        @apply flex items-center justify-center gap-2 mt-8;
+    }
+    .pagination .page-link {
+        @apply w-10 h-10 rounded-full flex items-center justify-center text-sm border border-gray-200 text-primary hover:bg-primary hover:text-white hover:border-primary transition;
+    }
+    .pagination .active .page-link {
+        @apply bg-primary text-white border-primary;
+    }
+}
