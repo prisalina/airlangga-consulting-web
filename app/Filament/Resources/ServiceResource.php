@@ -39,7 +39,7 @@ class ServiceResource extends Resource
                         ->label('Nama Layanan')
                         ->required()
                         ->live(onBlur: true)
-                        ->afterStateUpdated(fn (string $state, Set $set) => $set('slug', str($state)->slug())
+                        ->afterStateUpdated(fn (string $state, $set) => $set('slug', str($state)->slug())
                         ),
                     Forms\Components\TextInput::make('slug')
                         ->label('Slug')

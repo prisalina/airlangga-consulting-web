@@ -30,7 +30,7 @@ class PostCategoryResource extends Resource
     public static function form(Schema $schema): Schema
     {
         return $schema->schema([
-            Forms\Components\TextInput::make('name')->label('Nama Kategori')->required()->live(onBlur: true)->afterStateUpdated(fn ($state, Set $set) => $set('slug', str($state)->slug())),
+            Forms\Components\TextInput::make('name')->label('Nama Kategori')->required()->live(onBlur: true)->afterStateUpdated(fn ($state, $set) => $set('slug', str($state)->slug())),
             Forms\Components\TextInput::make('slug')->label('Slug')->required()->unique(ignoreRecord: true),
             Forms\Components\TextInput::make('sort_order')->label('Urutan')->numeric()->default(0),
         ])->columns(2);

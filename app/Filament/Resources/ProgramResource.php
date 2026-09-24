@@ -36,7 +36,7 @@ class ProgramResource extends Resource
                     ->label('Judul Program')
                     ->required()
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn ($state, Set $set) => $set('slug', str($state)->slug())),
+                    ->afterStateUpdated(fn ($state, $set) => $set('slug', str($state)->slug())),
                 Forms\Components\TextInput::make('slug')->label('Slug')->required()->unique(ignoreRecord: true),
                 Forms\Components\Select::make('format')->label('Format')->options(['Online' => 'Online', 'Offline' => 'Offline', 'Hybrid' => 'Hybrid']),
                 Forms\Components\TextInput::make('location')->label('Lokasi'),

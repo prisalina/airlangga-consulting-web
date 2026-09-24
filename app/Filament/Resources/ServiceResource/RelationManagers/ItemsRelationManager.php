@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\ServiceResource\RelationManagers;
 
+use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Forms;
@@ -24,7 +25,7 @@ class ItemsRelationManager extends RelationManager
                 ->label('Nama Sub-Layanan')
                 ->required()
                 ->live(onBlur: true)
-                ->afterStateUpdated(fn (string $state, Set $set) => $set('slug', str($state)->slug())
+                ->afterStateUpdated(fn (string $state, $set) => $set('slug', str($state)->slug())
                 ),
             Forms\Components\TextInput::make('slug')
                 ->label('Slug')

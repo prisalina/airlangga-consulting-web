@@ -32,7 +32,7 @@ class CaseStudyResource extends Resource
     {
         return $schema->schema([
             Section::make()->schema([
-                Forms\Components\TextInput::make('title')->label('Judul')->required()->live(onBlur: true)->afterStateUpdated(fn ($state, Set $set) => $set('slug', str($state)->slug())),
+                Forms\Components\TextInput::make('title')->label('Judul')->required()->live(onBlur: true)->afterStateUpdated(fn ($state, $set) => $set('slug', str($state)->slug())),
                 Forms\Components\TextInput::make('slug')->label('Slug')->required()->unique(ignoreRecord: true),
                 Forms\Components\TextInput::make('client')->label('Klien')->nullable(),
                 Forms\Components\TextInput::make('sector')->label('Sektor')->nullable(),

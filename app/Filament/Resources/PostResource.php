@@ -37,7 +37,7 @@ class PostResource extends Resource
                     ->label('Judul')
                     ->required()
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn (string $state, Set $set) => $set('slug', str($state)->slug())
+                    ->afterStateUpdated(fn (string $state, $set) => $set('slug', str($state)->slug())
                     )
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('slug')
