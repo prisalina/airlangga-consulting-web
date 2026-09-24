@@ -10,6 +10,7 @@ use Filament\Actions\EditAction;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -36,7 +37,7 @@ class PostResource extends Resource
                     ->label('Judul')
                     ->required()
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn (string $state, Forms\Set $set) => $set('slug', str($state)->slug())
+                    ->afterStateUpdated(fn (string $state, Set $set) => $set('slug', str($state)->slug())
                     )
                     ->columnSpanFull(),
                 Forms\Components\TextInput::make('slug')

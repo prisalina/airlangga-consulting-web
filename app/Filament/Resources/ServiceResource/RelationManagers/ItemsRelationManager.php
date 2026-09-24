@@ -6,6 +6,7 @@ use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Forms;
 use Filament\Resources\RelationManagers\RelationManager;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -23,7 +24,7 @@ class ItemsRelationManager extends RelationManager
                 ->label('Nama Sub-Layanan')
                 ->required()
                 ->live(onBlur: true)
-                ->afterStateUpdated(fn (string $state, Forms\Set $set) => $set('slug', str($state)->slug())
+                ->afterStateUpdated(fn (string $state, Set $set) => $set('slug', str($state)->slug())
                 ),
             Forms\Components\TextInput::make('slug')
                 ->label('Slug')

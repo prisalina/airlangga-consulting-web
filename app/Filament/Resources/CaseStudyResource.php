@@ -9,6 +9,7 @@ use Filament\Actions\EditAction;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -31,7 +32,7 @@ class CaseStudyResource extends Resource
     {
         return $schema->schema([
             Section::make()->schema([
-                Forms\Components\TextInput::make('title')->label('Judul')->required()->live(onBlur: true)->afterStateUpdated(fn ($state, Forms\Set $set) => $set('slug', str($state)->slug())),
+                Forms\Components\TextInput::make('title')->label('Judul')->required()->live(onBlur: true)->afterStateUpdated(fn ($state, Set $set) => $set('slug', str($state)->slug())),
                 Forms\Components\TextInput::make('slug')->label('Slug')->required()->unique(ignoreRecord: true),
                 Forms\Components\TextInput::make('client')->label('Klien')->nullable(),
                 Forms\Components\TextInput::make('sector')->label('Sektor')->nullable(),
