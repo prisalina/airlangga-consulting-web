@@ -9,7 +9,6 @@ use Filament\Actions\EditAction;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -38,7 +37,7 @@ class CaseStudyResource extends Resource
                 Forms\Components\TextInput::make('sector')->label('Sektor')->nullable(),
                 Forms\Components\TextInput::make('service_type')->label('Jenis Layanan')->nullable(),
                 Forms\Components\DatePicker::make('completed_at')->label('Selesai'),
-                Forms\Components\FileUpload::make('thumbnail')->label('Gambar')->image()->directory('case-studies'),
+                Forms\Components\FileUpload::make('thumbnail')->label('Gambar')->image()->disk('public')->directory('case-studies'),
                 Forms\Components\Textarea::make('excerpt')->label('Ringkasan')->rows(3)->columnSpanFull(),
                 Forms\Components\RichEditor::make('content')->label('Konten Lengkap')->columnSpanFull(),
                 Forms\Components\Toggle::make('is_active')->label('Aktif')->default(true),

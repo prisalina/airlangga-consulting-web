@@ -33,7 +33,7 @@ class TeamResource extends Resource
             Section::make()->schema([
                 Forms\Components\TextInput::make('name')->label('Nama')->required(),
                 Forms\Components\TextInput::make('position')->label('Jabatan')->required(),
-                Forms\Components\FileUpload::make('photo')->label('Foto')->image()->directory('teams')->avatar()->imageEditor(),
+                Forms\Components\FileUpload::make('photo')->label('Foto')->image()->disk('public')->directory('teams')->avatar()->imageEditor(),
                 Forms\Components\TextInput::make('linkedin')->label('LinkedIn URL'),
                 Forms\Components\Textarea::make('bio')->label('Bio')->rows(3)->columnSpanFull(),
                 Forms\Components\TextInput::make('sort_order')->label('Urutan')->numeric()->default(0),

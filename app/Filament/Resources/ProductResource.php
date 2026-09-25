@@ -9,7 +9,6 @@ use Filament\Actions\EditAction;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -37,7 +36,7 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('category')->label('Kategori'),
                 Forms\Components\TextInput::make('price')->label('Harga (Rp)')->numeric()->prefix('Rp')->nullable(),
                 Forms\Components\TextInput::make('purchase_link')->label('Link Pembelian')->url()->columnSpanFull(),
-                Forms\Components\FileUpload::make('thumbnail')->label('Gambar')->image()->directory('products'),
+                Forms\Components\FileUpload::make('thumbnail')->label('Gambar')->image()->disk('public')->directory('products'),
                 Forms\Components\TextInput::make('sort_order')->label('Urutan')->numeric()->default(0),
                 Forms\Components\Textarea::make('description')->label('Deskripsi')->rows(3)->columnSpanFull(),
                 Forms\Components\RichEditor::make('content')->label('Konten Lengkap')->columnSpanFull(),

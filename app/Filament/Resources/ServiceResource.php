@@ -11,7 +11,6 @@ use Filament\Actions\EditAction;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -57,6 +56,7 @@ class ServiceResource extends Resource
                     Forms\Components\FileUpload::make('image')
                         ->label('Gambar')
                         ->image()
+                        ->disk('public')
                         ->directory('services')
                         ->columnSpanFull(),
                     Forms\Components\TextInput::make('icon')

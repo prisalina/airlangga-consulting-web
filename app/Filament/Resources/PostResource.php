@@ -10,7 +10,6 @@ use Filament\Actions\EditAction;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -62,6 +61,7 @@ class PostResource extends Resource
                 Forms\Components\FileUpload::make('thumbnail')
                     ->label('Gambar Utama')
                     ->image()
+                    ->disk('public')
                     ->directory('posts')
                     ->columnSpanFull(),
                 Forms\Components\Toggle::make('is_active')->label('Aktif')->default(true),

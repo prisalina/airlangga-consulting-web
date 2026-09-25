@@ -33,7 +33,7 @@ class TestimonialResource extends Resource
             Section::make()->schema([
                 Forms\Components\TextInput::make('name')->label('Nama')->required(),
                 Forms\Components\TextInput::make('position')->label('Jabatan & Instansi')->required(),
-                Forms\Components\FileUpload::make('photo')->label('Foto')->image()->directory('testimonials')->avatar(),
+                Forms\Components\FileUpload::make('photo')->label('Foto')->image()->disk('public')->directory('testimonials')->avatar(),
                 Forms\Components\TextInput::make('sort_order')->label('Urutan')->numeric()->default(0),
                 Forms\Components\Textarea::make('content')->label('Isi Testimoni')->required()->rows(4)->columnSpanFull(),
                 Forms\Components\Toggle::make('is_active')->label('Aktif')->default(true),

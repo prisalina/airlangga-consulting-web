@@ -9,7 +9,6 @@ use Filament\Actions\EditAction;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -45,7 +44,7 @@ class ProgramResource extends Resource
                 Forms\Components\TextInput::make('price')->label('Harga (Rp)')->numeric()->prefix('Rp')->nullable(),
                 Forms\Components\TextInput::make('quota')->label('Kuota')->numeric()->nullable(),
                 Forms\Components\TextInput::make('registration_link')->label('Link Pendaftaran')->url(),
-                Forms\Components\FileUpload::make('thumbnail')->label('Gambar')->image()->directory('programs'),
+                Forms\Components\FileUpload::make('thumbnail')->label('Gambar')->image()->disk('public')->directory('programs'),
                 Forms\Components\Textarea::make('description')->label('Deskripsi')->rows(3)->columnSpanFull(),
                 Forms\Components\RichEditor::make('content')->label('Konten Lengkap')->columnSpanFull(),
                 Forms\Components\Toggle::make('is_active')->label('Aktif')->default(true),
