@@ -56,7 +56,7 @@ class ProgramResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('thumbnail')->label('Gambar'),
+                Tables\Columns\ImageColumn::make('thumbnail')->label('Gambar')->disk('public'),
                 Tables\Columns\TextColumn::make('title')->label('Judul')->searchable(),
                 Tables\Columns\TextColumn::make('format')->label('Format')->badge(),
                 Tables\Columns\TextColumn::make('start_date')->label('Mulai')->date('d M Y')->sortable(),

@@ -77,7 +77,7 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('thumbnail')->label('Gambar')->square(),
+                Tables\Columns\ImageColumn::make('thumbnail')->label('Gambar')->disk('public')->square(),
                 Tables\Columns\TextColumn::make('title')->label('Judul')->searchable()->limit(50),
                 Tables\Columns\TextColumn::make('category.name')->label('Kategori'),
                 Tables\Columns\TextColumn::make('published_at')->label('Terbit')->date('d M Y')->sortable(),

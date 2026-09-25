@@ -49,7 +49,7 @@ class CaseStudyResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('thumbnail')->label('Gambar'),
+                Tables\Columns\ImageColumn::make('thumbnail')->label('Gambar')->disk('public'),
                 Tables\Columns\TextColumn::make('title')->label('Judul')->searchable(),
                 Tables\Columns\TextColumn::make('client')->label('Klien'),
                 Tables\Columns\TextColumn::make('sector')->label('Sektor'),

@@ -46,7 +46,7 @@ class TeamResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('photo')->label('Foto')->circular(),
+                Tables\Columns\ImageColumn::make('photo')->label('Foto')->disk('public')->circular(),
                 Tables\Columns\TextColumn::make('name')->label('Nama')->searchable(),
                 Tables\Columns\TextColumn::make('position')->label('Jabatan'),
                 Tables\Columns\TextColumn::make('sort_order')->label('#')->sortable(),
